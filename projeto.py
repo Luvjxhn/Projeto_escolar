@@ -23,7 +23,7 @@ def encode_tap(text):
     result = []
     for char in text:
         if char in tap_dict:
-            result.append(tap_dict[f"({char})"])
+            result.append(tap_dict[char])
         elif char == " ":
             result.append("/")
     return " ".join(result)
