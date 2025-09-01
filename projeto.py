@@ -23,7 +23,7 @@ def encode_tap(text):
     result = []
     for char in text:
         if char in tap_dict:
-            result.append(tap_dict[char])
+            result.append(tap_dict[f"({char})"])
         elif char == " ":
             result.append("/")
     return " ".join(result)
@@ -42,7 +42,7 @@ def decode_tap(code):
     return "".join(result)
 
 
-st.title("🔠 Tap Code Encoder/Decoder")
+st.title("Tap encoder/decoder do Johnzinho")
 
 option = st.radio("Escolha uma opção:", ["Codificar", "Decodificar"])
 
